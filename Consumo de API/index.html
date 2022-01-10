@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Consumo de API/style.css">
+    <title>Loja de Games</title>
+</head>
+<body>
+
+    <h2>Login</h2> <br>
+
+    <div class="login">
+
+        <input type="text" name="email" id="email" placeholder="bryan_july@hotmail.com"> <br>
+        <input type="text" name="password" id="password" placeholder="******"> <br>
+        <button onclick="login()">Entrar</button>
+
+    </div>
+
+    <h2>Lista de Games</h2>
+
+    <ul id="games"></ul>
+    <hr>
+
+    <h4>Novo Game</h4>
+
+    <div class="jogos">
+
+        <input id="title" type="text" name="title" placeholder="Título"> <br> 
+        <input id="year" type="number" name="year" placeholder="Ano"> <br> 
+        <input id="price" type="number" name="price" placeholder="Preço"> <br> 
+        <button type="button" onclick="createGame()">Criar</button>
+
+    </div>
+
+    <hr>
+
+    <h4>Editar Game</h4>
+
+    <div class="editar">
+
+        <input id="idEdit" type="text" name="idEdit" placeholder="ID" readonly> <br> 
+        <input id="titleEdit" type="text" name="titleEdit" placeholder="Título"> <br> 
+        <input id="yearEdit" type="number" name="yearEdit" placeholder="Ano"> <br> 
+        <input id="priceEdit" type="number" name="priceEdit" placeholder="Preço"> <br> 
+        <button type="button" onclick="updateGame()">Editar</button>
+
+    </div>
+   
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/Consumo de API/script.js"></script>
+
+</html>
