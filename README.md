@@ -8,6 +8,8 @@ Este endpoint é responsavel por retornar a listagem de todos os games cadastrad
 Nenhum
 #### Respostas
 ##### OK! 200
+Caso esta resposta acontesça , você vai receber a listagem de todos os games .
+Exemplo de resposta.
 ```
  {
         "id": 23,
@@ -29,6 +31,5 @@ Nenhum
     }
 
 ```
-Caso esta resposta acontesça , você vai receber a listagem de todos os games .
 ##### Falha na autenticação! 401
 Caso essa resposta aconteça , isso significa que aconteceu alguma falha durante o processo de autenticação da requisição. Motivos , token invalido , token expirado.
