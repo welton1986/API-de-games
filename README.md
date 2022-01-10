@@ -40,3 +40,41 @@ Exemplo de resposta.
 "err": "Token invalido"
 
 ```
+
+
+
+### Post /auth
+Este endpoint é responsável por fazer o processo de login.
+#### Parametros
+email: E-mail do usuário cadastrado no sistema.
+
+password: Senha do usuário cadastrado no sistema , com o seu determinado e-mail.
+
+Exemplo:
+
+```
+{
+"email": "welton@welton.com",
+"password": "1234"
+
+}
+```
+
+#### Respostas
+##### OK! 200
+Caso esta resposta acontesça , você vai receber o token JWT para conseguir acessar endpoints protegidos na API .
+
+Exemplo de resposta.
+```
+ {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ3ZWx0b25Ad2VsdG9uLmNvbSIsImlhdCI6MTY0MTgyODIxMywiZXhwIjoxNjQyMDAxMDEzfQ.DEqQ-IFPANF2-9q89HqcM11QR4cFq1dbIUYb93Y5Iqg"
+}
+```
+##### Falha na autenticação! 401
+Caso essa resposta aconteça , isso significa que aconteceu alguma falha durante o processo de autenticação da requisição. Motivos , senha ou e-mail incorretos.
+
+Exemplo de resposta.
+```
+{err:"Credenciais invalidas"}
+
+```
